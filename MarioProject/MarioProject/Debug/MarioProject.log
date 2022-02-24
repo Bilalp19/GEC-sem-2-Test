@@ -1,0 +1,8 @@
+﻿  Character.cpp
+C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\Character.cpp(36,45): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\Character.cpp(40,45): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  GameScreen.cpp
+  MarioProject.cpp
+  Generating Code...
+C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\MarioProject.cpp(127): warning C4715: 'InitSDL': not all control paths return a value
+  MarioProject.vcxproj -> C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\Debug\MarioProject.exe
