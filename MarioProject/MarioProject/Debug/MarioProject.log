@@ -1,0 +1,3 @@
+﻿  GameScreenLevel1.cpp
+C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\GameScreenLevel1.cpp(60): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
+  MarioProject.vcxproj -> C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\Debug\MarioProject.exe
