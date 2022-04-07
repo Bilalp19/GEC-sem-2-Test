@@ -1,15 +1,17 @@
 #ifndef _GAMESCREENLEVEL1_H
 #define _GAMESCREENLEVEL1_H
 #include "GameScreen.h"
-#include <iostream>
 #include "Commons.h"
-
-
-
+#include "LevelMap.h"
+#include <iostream>
+#include <vector>
 
 class Texture2D;
 class Mario;
 class Luigi;
+class CharacterKoopa;
+class LevelMap;
+class PowBlock;
 
 
 class GameScreenLevel1 : GameScreen
@@ -20,12 +22,26 @@ public:
 
 	void Render() override;
 	void Update(float deltaTime, SDL_Event e) override;
+	void UpdatePowBlock();
+	
 
 private:
-Texture2D* m_background_texture;
-bool SetUpLevel();
-Mario* mario;
-Luigi* luigi;
+	Texture2D* m_background_texture;
+	bool SetUpLevel();
+	Mario* mario;
+	Luigi* luigi;
+	void SetLevelMap();
+	LevelMap* m_level_map;
+	PowBlock* m_pow_block;
+	bool m_screenshake;
+	float m_shake_time;
+	float m_wobble;
+	float m_background_yPos;
+	void DoScreenShake();
+	void UpdateEnemies(float deltaTime, SDL_Event e);
+	void CreateKoopa(Vector2D position, FACING direction, float speed);
+	std::vector<CharacterKoopa*> m_enemies;
+
 };
 
 #endif
