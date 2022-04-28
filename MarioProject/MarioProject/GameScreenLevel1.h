@@ -30,6 +30,7 @@ private:
 	bool SetUpLevel();
 	Mario* mario;
 	Luigi* luigi;
+	CharacterKoopa* koopa;
 	void SetLevelMap();
 	LevelMap* m_level_map;
 	PowBlock* m_pow_block;

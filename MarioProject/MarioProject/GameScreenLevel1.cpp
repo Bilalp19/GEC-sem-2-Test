@@ -41,6 +41,7 @@ void GameScreenLevel1::Render()
 	m_pow_block->Render();
 	mario->Render();
 	luigi->Render();
+	
 
 }
 
@@ -177,7 +178,8 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 
 void GameScreenLevel1::CreateKoopa(Vector2D position, FACING direction, float speed)
 {
-
+	CharacterKoopa* koopa = new CharacterKoopa(m_renderer, "Images/Koopa.png", m_level_map, position, direction, speed );
+	m_enemies.push_back(koopa);
 }
 
 bool GameScreenLevel1::SetUpLevel()

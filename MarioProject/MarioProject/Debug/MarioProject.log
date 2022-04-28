@@ -1,13 +1,1 @@
-﻿  PowBlock.cpp
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(19,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(20,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(54,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(57,43): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(57,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(57,62): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(57,62): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(61,67): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(61,67): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(61,86): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\PowBlock.cpp(61,86): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  MarioProject.vcxproj -> C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\Debug\MarioProject.exe
+﻿  MarioProject.vcxproj -> C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\Debug\MarioProject.exe
