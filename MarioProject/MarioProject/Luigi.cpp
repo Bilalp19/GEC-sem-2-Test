@@ -22,7 +22,7 @@ void Luigi::Update(float deltaTime, SDL_Event e)
 			m_moving_right = true;
 			break;
 
-		case SDLK_SPACE:
+		case SDLK_w:
 			Jump();
 			break;
 		}

@@ -22,6 +22,7 @@ protected:
 	virtual void MoveLeft(float deltaTime);
 	virtual void MoveRight(float deltaTime);
 	virtual void AddGravity(float deltaTime);
+	virtual void OnScreen(float deltaTime);
 	bool m_jumping;
 	bool m_can_jump;
 	float m_movement_speed;
@@ -36,12 +37,14 @@ public:
 	virtual void Update(float deltaTime, SDL_Event e);
 	void SetPosition(Vector2D new_postion);
 	Vector2D getPosition();
-	float GetCollisionRadius();
+
+	Circle2D GetCollisionRadius();
 	Rect2D GetCollisionBox();
+
 	void Jump();
 	bool IsJumping() { return m_jumping; }
 	void CancelJump() { m_jumping = false; }
-	bool SetAlive(bool isAlive);
+	void SetAlive(bool isAlive) { m_alive = isAlive; }
 	bool GetAlive() { return m_alive; }
 private: 
 	LevelMap* m_current_level_map;

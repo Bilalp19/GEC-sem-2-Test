@@ -12,6 +12,7 @@ class Luigi;
 class CharacterKoopa;
 class LevelMap;
 class PowBlock;
+class Coin;
 
 
 class GameScreenLevel1 : GameScreen
@@ -23,6 +24,7 @@ public:
 	void Render() override;
 	void Update(float deltaTime, SDL_Event e) override;
 	void UpdatePowBlock();
+
 	
 
 private:
@@ -31,6 +33,7 @@ private:
 	Mario* mario;
 	Luigi* luigi;
 	CharacterKoopa* koopa;
+	Coin* coin;
 	void SetLevelMap();
 	LevelMap* m_level_map;
 	PowBlock* m_pow_block;
@@ -38,10 +41,15 @@ private:
 	float m_shake_time;
 	float m_wobble;
 	float m_background_yPos;
+	float k_timer;
 	void DoScreenShake();
 	void UpdateEnemies(float deltaTime, SDL_Event e);
+	void UpdateCoin(float deltaTime, SDL_Event e);
 	void CreateKoopa(Vector2D position, FACING direction, float speed);
+	void CreateCoin(Vector2D position);
 	std::vector<CharacterKoopa*> m_enemies;
+	std::vector<Coin*> m_coins;
+	
 
 };
 

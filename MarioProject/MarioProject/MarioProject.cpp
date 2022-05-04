@@ -14,7 +14,7 @@ SDL_Renderer* g_renderer = nullptr;
 GameScreenManager* game_screen_manager;
 Uint32 g_old_time;
 Mix_Music* g_music = nullptr;
-//Texture2D* g_texture = nullptr;
+
 
 
 //Function Prototypes
@@ -23,9 +23,6 @@ bool CloseSDL();
 bool Update();
 void Render();
 void LoadMusic(string path);
-
-	
-
 
 int main(int argc, char* args[])
 {
@@ -37,7 +34,7 @@ int main(int argc, char* args[])
 			Mix_PlayMusic(g_music, -1);
 		}
 
-		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL1);
+		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_MENU);
 		//set the time
 		g_old_time = SDL_GetTicks();
 		bool quit = false; 
@@ -48,7 +45,6 @@ int main(int argc, char* args[])
 			quit = Update();
 		}
 	}
-
 
 	CloseSDL();
 		
@@ -74,7 +70,15 @@ bool Update()
 		case SDLK_q :
 		return true;
 		break;
-
+		case SDLK_0:
+			game_screen_manager->ChangeScreen(SCREEN_MENU);
+			break;
+		case SDLK_1:
+			game_screen_manager->ChangeScreen(SCREEN_LEVEL1);
+			break;
+		case SDLK_2:
+			game_screen_manager->ChangeScreen(SCREEN_LEVEL2);
+			break;
 	}
 	game_screen_manager->Update((float)(new_time - g_old_time) / 1000.0f, e);
 	g_old_time = new_time;
@@ -120,11 +124,6 @@ bool InitSDL()
 				return false; 
 			}
 
-			//g_texture = new Texture2D(g_renderer);
-			/*if (!g_texture->LoadFromFile("Images/test.bmp"))
-			{
-				return false;
-			}*/
 		}	
 		else 
 		{
@@ -158,8 +157,6 @@ bool CloseSDL()
 	//destroy the game screen manager
 	delete game_screen_manager;
 	game_screen_manager = nullptr;
-	/*delete g_texture;
-	g_texture = nullptr;*/
 
 }
 
@@ -170,7 +167,6 @@ void Render()
 	SDL_RenderClear(g_renderer);
 
 	game_screen_manager->Render();
-	/*g_texture->Render(Vector2D(), SDL_FLIP_NONE);*/
 
 	//update the screen
 	SDL_RenderPresent(g_renderer);

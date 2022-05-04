@@ -1,11 +1,7 @@
 #include "CharacterKoopa.h"
-#include "Character.h"
 #include "Texture2D.h"
 #include "constant.h"
 #include "Commons.h"
-#include "LevelMap.h"
-
-
 
 CharacterKoopa::CharacterKoopa(SDL_Renderer* renderer, string imagePath, LevelMap* map, Vector2D start_position, FACING start_facing, float movement_speed) : Character (renderer, imagePath, start_position, map)
 {
@@ -47,6 +43,7 @@ void CharacterKoopa::FlipRightwayUp()
 	m_facing_direction;
 	Jump();
 }
+
 void CharacterKoopa::Render()
 {
 	//variable to hold the left position of the sprite we want to draw
@@ -83,13 +80,11 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 		//enemy is not injured so move
 		if (m_facing_direction == FACING_LEFT)
 		{
-			m_moving_left = true;
-			m_moving_right = false;
+			MoveLeft(deltaTime);
 		}
 		else if (m_facing_direction == FACING_RIGHT)
 		{
-			m_moving_right = true;
-			m_moving_left = false;
+			MoveRight(deltaTime);
 		}
 	}
 	else
@@ -106,6 +101,19 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 
 	}
 
+
+	Character::Update(deltaTime,e);
+
 }
 
+void CharacterKoopa::MoveLeft(float deltaTime)
+{
+	m_facing_direction = FACING_LEFT;
+	m_position.x -= deltaTime * m_movement_speed;
+}
 
+void CharacterKoopa::MoveRight(float deltaTime)
+{
+	m_facing_direction = FACING_RIGHT;
+	m_position.x += deltaTime * m_movement_speed;
+}

@@ -5,7 +5,7 @@
 #define MAP_HEIGHT 13 
 #define MAP_WIDTH 16
 //CHARACTER SPEED AND MOVEMENT
-#define MOVEMENTSPEED 50.0f
+#define MOVEMENTSPEED 100.0f
 #define JUMP_FORCE_DECREMENT 400.0f
 #define INITAL_JUMP_FORCE 600.0f
 #define GRAVITY 300.0f
@@ -17,4 +17,6 @@
 //Injured Time
 #define INJURED_TIME 2.5f
 //KOOPA
-#define KOOPA_SPEED 96.0f
+#define KOOPA_SPEED 40.0f
+//Animation
+#define ANIMATION_DELAY 0.10f	

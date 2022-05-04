@@ -51,6 +51,7 @@ void Character::Update(float deltaTime, SDL_Event e)
 		MoveRight(deltaTime);
 	}
 
+	OnScreen(deltaTime);
 
 	if (m_jumping)
 	{
@@ -116,6 +117,20 @@ void Character::AddGravity(float deltaTime)
 	}
 }
 
+void Character::OnScreen(float deltaTime)
+{
+	if (m_position.x + m_texture->GetWidth() >= SCREEN_WIDTH)
+	{
+		m_facing_direction = FACING_LEFT;
+		m_position.x -= deltaTime * MOVEMENTSPEED;
+	}
+	else if (m_position.x <0)
+	{
+		m_facing_direction = FACING_RIGHT;
+		m_position.x += deltaTime * MOVEMENTSPEED;
+	}
+}
+
 void Character::Jump()
 {
 	if (!m_jumping)
@@ -126,16 +141,9 @@ void Character::Jump()
 	}
 }
 
-bool Character::SetAlive(bool isAlive)
+Circle2D Character::GetCollisionRadius()
 {
-	return m_alive = isAlive; 
-}
-
-
-
-float Character::GetCollisionRadius()
-{
-	return m_collision_radius;
+	return Circle2D(m_position.x, m_position.y, m_collision_radius);
 }
 
 Rect2D Character::GetCollisionBox()

@@ -30,7 +30,6 @@ PowBlock::~PowBlock()
 	delete m_texture;
 	m_texture = nullptr;
 	m_level_map = nullptr;
-
 }
 
 
@@ -38,7 +37,7 @@ void PowBlock::TakeHit()
 {
 	--m_num_hits_left;
 
-	if (m_num_hits_left < 0)
+	if (m_num_hits_left <= 0)
 	{
 		m_num_hits_left = 0;
 		m_level_map->ChangeTileAt(8, 7, 0);
