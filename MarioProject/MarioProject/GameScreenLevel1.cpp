@@ -12,13 +12,14 @@ using namespace std;
 
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
 {
+	m_level_map = nullptr;
+
 	SetUpLevel();
 	//Set up player character
 
 	
-	m_level_map = nullptr;
 
-	k_timer = 2.0f;
+	k_timer = 5.0f;
 }
 GameScreenLevel1::~GameScreenLevel1()
 {
@@ -98,7 +99,7 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 		CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
 		CreateKoopa(Vector2D(300, 32), FACING_LEFT, KOOPA_SPEED);
 		//reset timer
-		k_timer = 2.0f;
+		k_timer = 5.0f;
 	}
 }
 
