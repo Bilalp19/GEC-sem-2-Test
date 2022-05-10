@@ -6,7 +6,7 @@ using namespace std;
 GameScreenMenu::GameScreenMenu(SDL_Renderer* renderer) : GameScreen(renderer)
 {
 	m_background_texture = new Texture2D(renderer);
-	if (!m_background_texture->LoadFromFile("Images/test.bmp"))
+	if (!m_background_texture->LoadFromFile("Images/menu.png"))
 	{
 		cout << "Failed to load background texture!" << endl;
 	}

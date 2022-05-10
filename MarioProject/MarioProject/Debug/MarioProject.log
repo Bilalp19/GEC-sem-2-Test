@@ -1,6 +1,6 @@
-﻿  GameScreenLevel1.cpp
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\GameScreenLevel1.cpp(38,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\GameScreenLevel1.cpp(47,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\GameScreenLevel1.cpp(231,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\GameScreenLevel1.cpp(287): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
-  MarioProject.vcxproj -> C:\Users\p016979l\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\Debug\MarioProject.exe
+﻿  GameScreenLevel2.cpp
+C:\Users\bilal\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\GameScreenLevel2.cpp(38,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\bilal\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\GameScreenLevel2.cpp(47,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\bilal\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\GameScreenLevel2.cpp(231,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\bilal\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\MarioProject\GameScreenLevel2.cpp(300): warning C4715: 'GameScreenLevel2::SetUpLevel': not all control paths return a value
+  MarioProject.vcxproj -> C:\Users\bilal\OneDrive - Staffordshire University\Sem 2\Test\MarioProject\Debug\MarioProject.exe

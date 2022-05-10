@@ -19,7 +19,7 @@ GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer
 
 	
 
-	k_timer = 5.0f;
+	k_timer = 7.0f;
 }
 GameScreenLevel1::~GameScreenLevel1()
 {
@@ -278,6 +278,14 @@ bool GameScreenLevel1::SetUpLevel()
 
 	CreateCoin(Vector2D(150, 350));
 	CreateCoin(Vector2D(200, 350));
+	CreateCoin(Vector2D(250, 350));
+	CreateCoin(Vector2D(300, 350));
+	CreateCoin(Vector2D(350, 350));
+	CreateCoin(Vector2D(150, 140));
+	CreateCoin(Vector2D(200, 140));
+	CreateCoin(Vector2D(250, 140));
+	CreateCoin(Vector2D(300, 140));
+	CreateCoin(Vector2D(350, 140));
 
 
 	m_pow_block = new PowBlock(m_renderer, m_level_map);

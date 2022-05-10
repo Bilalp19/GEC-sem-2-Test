@@ -12,11 +12,12 @@ using namespace std;
 
 GameScreenLevel2::GameScreenLevel2(SDL_Renderer* renderer) : GameScreen(renderer)
 {
+	m_level_map = nullptr;
+
 	SetUpLevel();
 	//Set up player character
 
 
-	m_level_map = nullptr;
 
 	k_timer = 2.0f;
 }
@@ -91,15 +92,15 @@ void GameScreenLevel2::Update(float deltaTime, SDL_Event e)
 		}
 	}
 
-	//	k_timer -= deltaTime;
-	//	if (k_timer <= 0)//less or equal to zero
-	//	{
-	//		//call creatge koopa
-	//		CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
-	//		CreateKoopa(Vector2D(300, 32), FACING_LEFT, KOOPA_SPEED);
-	//		//reset timer
-	//		k_timer = 2.0f;
-	//	}
+	k_timer -= deltaTime;
+	if (k_timer <= 0)//less or equal to zero
+	{
+		//call creatge koopa
+		CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
+		CreateKoopa(Vector2D(300, 32), FACING_LEFT, KOOPA_SPEED);
+		//reset timer
+		k_timer = 5.0f;
+	}
 }
 
 void GameScreenLevel2::UpdatePowBlock()
@@ -272,11 +273,24 @@ bool GameScreenLevel2::SetUpLevel()
 	mario = new Mario(m_renderer, "Images/Mario.png", Vector2D(64, 330), m_level_map);
 	luigi = new Luigi(m_renderer, "Images/Luigi.png", Vector2D(100, 330), m_level_map);
 
-	CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
-	CreateKoopa(Vector2D(300, 32), FACING_LEFT, KOOPA_SPEED);
+	CreateKoopa(Vector2D(150, 130), FACING_RIGHT, KOOPA_SPEED);
+	CreateKoopa(Vector2D(300, 130), FACING_LEFT, KOOPA_SPEED);
 
 	CreateCoin(Vector2D(150, 350));
 	CreateCoin(Vector2D(200, 350));
+	CreateCoin(Vector2D(250, 350));
+	CreateCoin(Vector2D(300, 350));
+	CreateCoin(Vector2D(350, 350));
+	CreateCoin(Vector2D(400, 350));
+	CreateCoin(Vector2D(40, 160));
+	CreateCoin(Vector2D(10, 160));
+	CreateCoin(Vector2D(450, 160));
+	CreateCoin(Vector2D(490, 160));
+	CreateCoin(Vector2D(150, 140));
+	CreateCoin(Vector2D(200, 140));
+	CreateCoin(Vector2D(250, 140));
+	CreateCoin(Vector2D(300, 140));
+	CreateCoin(Vector2D(350, 140));
 
 
 	m_pow_block = new PowBlock(m_renderer, m_level_map);
